@@ -60,7 +60,7 @@ int Menu(){
         int temp = getch();
         if (temp != 224 && temp){
             if(temp == ENTER_KEY){
-                setColor();
+                setColor(15,0);
                 system("cls");
                 return cur;
             }
@@ -89,17 +89,17 @@ int Menu(){
 
 void readLeaderBoard(){
     gotoxy(60, 5);
-    setColor(10);
+    setColor(10,0);
     cout << "\e[1m"<<"LEADERBOARD"<<"\e[0m";
     gotoxy(30, 6);
-    setColor(10);
+    setColor(10,0);
     cout << "NAME";
     gotoxy(100, 6);
-    setColor(10);
+    setColor(10,0);
     cout << "POINT";
     
     gotoxy(30,7);
-    setColor();
+    setColor(15,0);
     for (int i = 0; i < 75; i++)
         cout << "=";
     
@@ -110,17 +110,21 @@ void readLeaderBoard(){
         while(!ifile.eof()){
             ifile.read(reinterpret_cast <char*>(&p),sizeof(p));
             
-            if (i < 4) setColor(11); // doi mau cho 3 play dung dau
-            else setColor();
+            if (i < 4) setColor(11,0); // doi mau cho 3 play dung dau
+            else setColor(15,0);
 
             gotoxy(30,8+i*2);
             cout << p.name;
             gotoxy(100,8+i*2);
             cout << p.point;
             i++;
+            gotoxy(30,9+i*2);
+            setColor(15,0);
+            for (int i = 0; i < 75; i++)
+                cout << "-";
         }
+        ifile.close();
     }
-    ifile.close();
     getch();
     system("cls");
 }
@@ -176,13 +180,12 @@ void writeLeaderBoard(Player p){
 
 }
 
-
 //testing
-int main(){
-    Player p{"test2", 200};
-    writeLeaderBoard(p);
-    Menu();
-    readLeaderBoard();
+// int main(){
+//     Player p{"test2", 200};
+//     writeLeaderBoard(p);
+//     Menu();
+//     readLeaderBoard();
 
-    return 0;
-}
+//     return 0;
+// }

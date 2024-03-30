@@ -2,6 +2,8 @@
 #include <fstream>
 #include <cstring>
 
+#include "Console.cpp"
+
 using namespace std;
 
 struct  player{
@@ -11,28 +13,83 @@ struct  player{
 
 
 int main(){
-    fstream fo("test.bin", ios::out | ios::binary);
-    player p{"hi hello", 100}, *list = new player [10];
-    // for (int i = 0; i < 10; i++){
-        strcpy(p.name,"hello hi");
-        p.point = 1;
-        fo.write(reinterpret_cast<char*>(&p), sizeof(p)/2);
-    // }
-    fo.close();
+    // fstream fo("test.bin", ios::out | ios::binary);
+    // player p{"hi hello 2", 100}, *list = new player [10];
+    // // for (int i = 0; i < 10; i++){
+    //     fo.write(reinterpret_cast<char*>(&p), sizeof(p)/2);
+    // // }
+    // fo.close();
 
-    fstream fi("test.bin", ios::in | ios::binary);
-    int i = 0;
-    while(fi){
-        fi.read(reinterpret_cast<char*>(&p), sizeof(p));
-        // *(list + i) = p;
-        cout << p.name << " " << p.point << endl;
-        i++;
+    // fstream fi("test.bin", ios::in | ios::binary);
+    // int i = 0;
+    // while(fi){
+    //     fi.read(reinterpret_cast<char*>(&p), sizeof(p));
+    //     // *(list + i) = p;
+    //     cout << p.name << " " << p.point << endl;
+    //     i++;
+    // }
+
+    // // for (int i = 0; i< 10; i++){
+    // //     cout << (list + i)->name << (list + i)->name << endl;
+    // // }
+    // fi.close();
+
+    // bool i = true;
+
+    // cout << i;
+
+    // char bg[20][81] ={
+    //     {" _______ _________ _        _______  _                                          "},
+    //     {"(  ____ \\\\__   __/( (    /|(  ___  )( \\                                         "},
+    //     {"| (    \\/   ) (   |  \\  ( || (   ) || (                                         "},
+    //     {"| (__       | |   |   \\ | || (___) || |                                         "},
+    //     {"|  __)      | |   | (\\ \\) ||  ___  || |                                         "},
+    //     {"| (         | |   | | \\   || (   ) || |                                         "},
+    //     {"| )      ___) (___| )  \\  || )   ( || (____/\\                                   "},
+    //     {"|/       \\_______/|/    )_)|/     \\|(_______/                                   "},                                                            
+    //     {" _______  _______  _______ _________ _______  _______ _________                 "},
+    //     {"(  ____ )(  ____ )(  ___  )\\__    _/(  ____ \\(  ____ \\__   __/                  "},
+    //     {"| (    )|| (    )|| (   ) |   )  (  | (    \\/| (    \\/   ) (                    "},
+    //     {"| (____)|| (____)|| |   | |   |  |  | (__    | |         | |                    "},
+    //     {"|  _____)|     __)| |   | |   |  |  |  __)   | |         | |                    "},
+    //     {"| (      | (\\ (   | |   | |   |  |  | (      | |         | |                    "},
+    //     {"| )      | ) \\ \\__| (___) ||\\_)  )  | (____/\\| (____/\\   | |                    "},
+    //     {"|/       |/   \\__/(_______)(____/   (_______/(_______/   )_(                    "},
+    //     {"          .-. .-.  .--.  .----. .----..-.  .-.   .----.   .--..-.  .-.          "},
+    //     {"          | {_} | / {} \\ | {}  }| {}  }\\ \\/ /    | {}  \\ / {} \\ \\/ /           "},
+    //     {"          | { } |/  /\\  \\| .--' | .--'  }  {     |     //  /\\  \\}  {            "},
+    //     {"          `-' `-'`-'  `-'`-'    `-'     `--'     `----' `-'  `-'`--'            "},
+    // };
+
+    // int x = 1, y = 1;
+    // // for (int i = 0; i < 5; i++){
+    // //     gotoxy(x * 10, y * 4);
+    // //     for (int j = 0; j < 8; i++){
+    // //         cout << bg[(y-1) * 4 + i][(x-1) * 10 + j];
+    // //         Sleep(100);
+    // //     }
+    // // }
+    // system("cls");
+    // for (int i = 0; i < 5; i++){
+    //     for (int j = 0; j < 11; j++){
+    //         gotoxy(x * 10 + j, y * 4 + i);
+    //         cout << bg[(y-1)*4 + i][(x-1)*10 + j];
+    //     }
+    // }
+
+    system("cls");
+    char status[][46] = {
+        {"\e[1m__   _____  _   _  __        _____ _   _ "},
+        {"\e[1m\\ \\ / / _ \\| | | | \\ \\      / /_ _| \\ | |"},
+        {"\e[1m \\ V / | | | | | |  \\ \\ /\\ / / | ||  \\| |"},
+        {"\e[1m  | || |_| | |_| |   \\ V  V /  | || |\\  |"},
+        {"\e[1m  |_| \\___/ \\___/     \\_/\\_/  |___|_| \\_|"},
+    };
+    for (int i = 0; i < 5; i++){
+        gotoxy(45,10+i);
+        cout << status[i];
     }
 
-    // for (int i = 0; i< 10; i++){
-    //     cout << (list + i)->name << (list + i)->name << endl;
-    // }
-    fi.close();
-
-
+    cin.get();
+    
 }

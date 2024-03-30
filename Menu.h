@@ -5,8 +5,10 @@
 #include <iostream>
 #include <conio.h>
 #include <fstream>
-#include "Console.cpp"
+#include "Console.h"
 #include "Struct.h"
+
+// #include "Menu.cpp"
 
 using namespace std;
 

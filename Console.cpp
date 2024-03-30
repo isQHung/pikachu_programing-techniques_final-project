@@ -17,6 +17,7 @@ void setCursor(bool visible) {
 }
 
 //ref: https://cplusplus.com/forum/beginner/91349/ 35->39
+// void setColor(int text, int background)
 void setColor(int text = 15, int background = 0){
     // default: white text on black background
     // black,          //  0 text color - multiply by 16, for background colors
