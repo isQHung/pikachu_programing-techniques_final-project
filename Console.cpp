@@ -5,11 +5,13 @@ void gotoxy(int a, int b){ //Custom gotoxy() function
     COORD coordinates; //Data type of co-ordinates
     coordinates.X = a; //Assign value to X- Co-ordinate
     coordinates.Y = b; //Assign value to Y Co-ordinate
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleCursorPosition(hConsole, coordinates);
 }
 
 // ref: https://github.com/PhVanMin/Pikachuuu/blob/master/ConsoleSettings.cpp 11->17
 void setCursor(bool visible) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO lpCursor;
     lpCursor.bVisible = visible;
     lpCursor.dwSize = 20;
@@ -36,18 +38,21 @@ void setColor(int text = 15, int background = 0){
 	// light_magenta,  // 13
 	// light_yellow,   // 14
 	// white           // 15
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, text + background*16);
 }
 
 //ref: https://github.com/PhVanMin/Pikachuuu/blob/master/ConsoleSettings.cpp 19->24
 void resizeWindow(int x, int y) {
     RECT r;
+    HWND wConsole = GetConsoleWindow();
     GetWindowRect(wConsole, &r);
     MoveWindow(wConsole, r.left, r.top, x, y, TRUE);
 }
 
 //ref: https://github.com/PhVanMin/Pikachuuu/blob/master/ConsoleSettings.cpp 26->37
 void hideScrollBar() {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_SCREEN_BUFFER_INFO screenBufferInfo;
     GetConsoleScreenBufferInfo(hConsole, &screenBufferInfo);
 

@@ -1,0 +1,38 @@
+[
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Console.cpp.obj -c D:\\project\\pikachuuu\\Console.cpp",
+  "file": "D:/project/pikachuuu/Console.cpp",
+  "output": "CMakeFiles/pikachu.dir/Console.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Main.cpp.obj -c D:\\project\\pikachuuu\\Main.cpp",
+  "file": "D:/project/pikachuuu/Main.cpp",
+  "output": "CMakeFiles/pikachu.dir/Main.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Menu.cpp.obj -c D:\\project\\pikachuuu\\Menu.cpp",
+  "file": "D:/project/pikachuuu/Menu.cpp",
+  "output": "CMakeFiles/pikachu.dir/Menu.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Normal.cpp.obj -c D:\\project\\pikachuuu\\Normal.cpp",
+  "file": "D:/project/pikachuuu/Normal.cpp",
+  "output": "CMakeFiles/pikachu.dir/Normal.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\NormalCheck.cpp.obj -c D:\\project\\pikachuuu\\NormalCheck.cpp",
+  "file": "D:/project/pikachuuu/NormalCheck.cpp",
+  "output": "CMakeFiles/pikachu.dir/NormalCheck.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Struct.cpp.obj -c D:\\project\\pikachuuu\\Struct.cpp",
+  "file": "D:/project/pikachuuu/Struct.cpp",
+  "output": "CMakeFiles/pikachu.dir/Struct.cpp.obj"
+}
+]

@@ -44,4 +44,5 @@ struct position{
 
 //background
 void displayBackground(int, int);
+void displayStatus(bool);
 #endif

@@ -47,7 +47,7 @@ void deleteBoard(Normal** board) {
 void renderBoard(Normal** board, int needhelp = 0){
     for(int i = 0; i < BOARDHEIGTH; i++)
         for(int j = 0; j  < BOARDWIDTH; j++)
-            board[i][j].drawbox();
+            board[i][j].drawbox(0);
 }
 
 //ref: https://github.com/PhVanMin/Pikachuuu/blob/master/NormalMode.cpp#L56  56->323

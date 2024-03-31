@@ -17,8 +17,8 @@
 #define BACK_KEY 8
 
 
-HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-HWND wConsole = GetConsoleWindow();
+// HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+// HWND wConsole = GetConsoleWindow();
 
 //Cursor setting
 void gotoxy(int, int);

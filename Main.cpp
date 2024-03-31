@@ -1,6 +1,7 @@
 #include "Menu.h"
-#include "Menu.cpp"
-#include "Normal.cpp"
+// #include "Menu.cpp"
+#include "Normal.h"
+// #include "Normal.cpp"
 
 // #include "Hard.h"
 
