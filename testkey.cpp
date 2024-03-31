@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
-
+#include <conio.h>
 #include "Console.cpp"
 
 using namespace std;
@@ -91,10 +91,13 @@ int main(){
     // }
 
     // cin.get();
-    // setColor(11,0);
-    // cout << "\e[1mhilll";
-    // cin.get();
-
-    
+    setColor(11,8);
+    cout << "\e[1mhilll";
+    cin.get();
+    // int temp = getch();
+    // while ( temp != 27){
+    //     temp = getch();
+    //     cout << temp <<endl;
+    // }
     
 }

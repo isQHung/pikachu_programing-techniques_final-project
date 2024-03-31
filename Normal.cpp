@@ -44,7 +44,7 @@ void deleteBoard(Normal** board) {
     delete[]board;
 }
 
-void renderBoard(Normal** board){
+void renderBoard(Normal** board, int needhelp = 0){
     for(int i = 0; i < BOARDHEIGTH; i++)
         for(int j = 0; j  < BOARDWIDTH; j++)
             board[i][j].drawbox();
@@ -94,6 +94,22 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                             board[selectedPos[1].y][selectedPos[1].x].isValid = 0;
                             board[selectedPos[1].y][selectedPos[1].x].deletebox();
                             displayBackground(selectedPos[1].x+1, selectedPos[1].y+1);
+
+
+                            // kiem tra su dung help
+                            bool isSuggestions = 0;
+                            for(int i = 0; i < BOARDHEIGTH && !isSuggestions; i++){
+                                for (int j = 0; j < BOARDWIDTH && !isSuggestions; j++){
+                                    if (board[i][j].suggestions && board[i][j].isValid) isSuggestions = 1;
+                                }
+                            }
+
+                            if (!isSuggestions){
+                                p.help--;
+                                gotoxy(100,0);
+                                cout << "Help: " << p.help;
+                            }
+
                         }
                         else {
                             board[selectedPos[0].y][selectedPos[0].x].drawbox();
@@ -132,7 +148,7 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                         }
                     }
 
-                    for (int i = 0; i <= pos.y; i++) { // chuyen den CELL_1 o tren
+                    for (int i = 0; i <= pos.y; i++) { // chuyen den cell o tren
                         for (int j = 0; j <= pos.x; j++) {
                             if (board[i][j].isValid) {
                                 pos.x = j;
@@ -143,6 +159,9 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                     }
                 }
             }
+            
+        }else if(temp == 104 && p.help > 0){ //neu la H key
+            checkValidPairs(board, 1);// dua ra goi y 
         }
     }
     else //neu la dau mui ten
@@ -333,6 +352,8 @@ void normalMode(Player &p, int increase = 0){
     cout << "Point: " << p.point;
     gotoxy(70, 0);
     cout << "Life: " << p.life;
+    gotoxy(100, 0);
+    cout << "Help: " << p.help;
 
     setColor(10,0);
     gotoxy(100, 12);
@@ -341,6 +362,8 @@ void normalMode(Player &p, int increase = 0){
     cout << "Press Enter to delete";
     gotoxy(100, 14);
     cout << "Press ESC to quit";
+    gotoxy(100, 15);
+    cout << "Press H to get move suggestions";
     setColor(15,0);
 
     position selectedPos[] = { {-1, -1}, {-1, -1} };
@@ -357,7 +380,7 @@ void normalMode(Player &p, int increase = 0){
 
         move(board, curPosition, status, p, selectedPos, couple);
 
-        if ((!checkValidPairs(board))) status = 1;
+        if ((!checkValidPairs(board, 0))) status = 1;
     }
 
     renderBoard(board);

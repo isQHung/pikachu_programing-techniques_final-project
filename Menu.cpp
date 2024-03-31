@@ -130,6 +130,7 @@ void readLeaderBoard(){
     system("cls");
 }
 
+
 void writeLeaderBoard(Player p){
     ifstream ifile("leaderboard.bin", ios::in | ios::binary);
     if(ifile){

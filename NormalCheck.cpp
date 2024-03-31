@@ -250,7 +250,7 @@ bool allcheck(Normal** board, int p1, int p2, int q1, int q2) {
     return false;
 }
 
-bool checkValidPairs(Normal** board) {
+bool checkValidPairs(Normal** board, bool needhelp = 0) {
     char check = 'A';
     while (check >= 'A' && check <= 'Z') {
         int cnt = 0;
@@ -266,6 +266,10 @@ bool checkValidPairs(Normal** board) {
         for (int i = 0; i < cnt - 2; i += 2) {
             for (int j = i + 2; j < cnt; j += 2) {
                 if (allcheck(board, pos[i], pos[i + 1], pos[j], pos[j + 1])) {
+                    if (needhelp){
+                        board[pos[i]][pos[i + 1]].suggestions = 1;
+                        board[pos[j]][pos[j + 1]].suggestions = 1;
+                    }
                     delete[] pos;
                     return true;
                 }

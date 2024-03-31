@@ -27,6 +27,16 @@ void Normal::drawbox(){
         gotoxy(x*10+5, y*4+2);
         setColor(c%6 + 9, 15);
         cout << "\e[1m" << c << "";
+    }else if (suggestions){
+        setColor(15,8); // nen xam
+        for (int i = 1; i < 4; i++) {
+            gotoxy(x * 10 + 1, y * 4 + i);
+            cout << "         ";
+        }
+
+        gotoxy(x*10+5, y*4+2);
+        setColor(c%6 + 9, 15);
+        cout << "\e[1m" << c << "";
     }else{
         gotoxy(x*10+5,y*4+2);
         setColor(c%6 + 9, 0);
@@ -118,4 +128,5 @@ void getPlayerInfo(Player& p) {
     // cin.ignore();
     p.life = 3;
     p.point = 0;
+    p.help = 3;
 }

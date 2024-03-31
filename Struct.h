@@ -16,6 +16,7 @@ struct Player{
     char name[50];
     int point;
     int life;
+    int help;
 };
 
 void getPlayerInfo(Player&);
@@ -23,7 +24,7 @@ void getPlayerInfo(Player&);
 // Normal mode
 struct Normal{
     int x,y;
-    int isValid = 1, isSelected = 0;
+    bool isValid = 1, isSelected = 0, suggestions = 0;
     char c = ' ';
 
     void drawbox();

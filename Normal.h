@@ -20,6 +20,6 @@
 
 void initBoard(Normal**&);
 void deleteBoard(Normal**);
-void renderBoard(Normal**);
+void renderBoard(Normal**,int);
 void normalMode(Player&);
 #endif
