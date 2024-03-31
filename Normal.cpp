@@ -11,9 +11,10 @@ void initBoard(Normal** &board, int increase = 0){
     }
 
     //set random value
+    if( increase > 5) increase = 5; // cố định độ khó tối đa
     int needSet = 20;
     while(needSet){
-        char randValue = rand() % 10 + increase + 65;
+        char randValue = rand() % (10 + increase*2) + 65;
         int couple = 2;
         while (couple){
             int randIndex = rand()%40;
@@ -101,6 +102,7 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
 
                             p.life--;
                             gotoxy(70, 0);
+                            setColor(15,0);
                             cout << "Life: " << p.life;
                         }
                     }
@@ -319,11 +321,11 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
     }
 }
 
-void normalMode(Player &p){
+void normalMode(Player &p, int increase = 0){
     srand(time(0));
 
     Normal** board;
-    initBoard(board, 0);
+    initBoard(board, increase);
 
     gotoxy(10, 0);
     cout << "Name: " << p.name;
@@ -371,7 +373,7 @@ void normalMode(Player &p){
         cin >> c;
         cin.ignore();
         system("cls");
-        if (c == 'y' || c == 'Y') normalMode(p);
+        if (c == 'y' || c == 'Y') normalMode(p, increase + 1); // tăng 1 độ khó nếu tiếp tục chơi
         else writeLeaderBoard(p);
     }
     else if (p.life == 0) {

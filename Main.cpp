@@ -15,7 +15,7 @@ int main(){
         switch (status){
             case 0:
                 getPlayerInfo(p);
-                normalMode(p);
+                normalMode(p,0);
                 break;
 
             case 1:

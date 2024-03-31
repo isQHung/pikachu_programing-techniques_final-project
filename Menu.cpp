@@ -103,12 +103,13 @@ void readLeaderBoard(){
     for (int i = 0; i < 75; i++)
         cout << "=";
     
-    fstream ifile("leaderboard.bin", ios::in | ios::binary);
+    ifstream ifile("leaderboard.bin", ios::in | ios::binary);
     if(ifile){
         Player p;
         int i = 0;
-        while(!ifile.eof()){
-            ifile.read(reinterpret_cast <char*>(&p),sizeof(p));
+        while(ifile.read((char*) &p,sizeof(Player))){
+            // ifile.read(reinterpret_cast <char*>(&p),sizeof(p));
+            // ifile.read((char*) &p,sizeof(Player));
             
             if (i < 4) setColor(11,0); // doi mau cho 3 play dung dau
             else setColor(15,0);
@@ -118,7 +119,7 @@ void readLeaderBoard(){
             gotoxy(100,8+i*2);
             cout << p.point;
             i++;
-            gotoxy(30,9+i*2);
+            gotoxy(30,7+i*2);
             setColor(15,0);
             for (int i = 0; i < 75; i++)
                 cout << "-";
@@ -130,12 +131,13 @@ void readLeaderBoard(){
 }
 
 void writeLeaderBoard(Player p){
-    fstream ifile("leaderboard.bin", ios::in | ios::binary);
+    ifstream ifile("leaderboard.bin", ios::in | ios::binary);
     if(ifile){
         Player* plist = new Player [10], temp;
         int count = 0;
-        while(ifile){
-            ifile.read(reinterpret_cast<char *>(&temp), sizeof(temp));
+        while(ifile.read((char *) &temp, sizeof(temp))){
+            // ifile.read(reinterpret_cast<char *>(&temp), sizeof(temp));
+            // ifile.read((char *) &temp, sizeof(temp));
             *(plist + count) = temp;
             count++;
         }
@@ -166,15 +168,15 @@ void writeLeaderBoard(Player p){
 
         ifile.close();
 
-        fstream ofile("leaderboard.bin", ios::out | ios::binary);
+        ofstream ofile("leaderboard.bin", ios::out | ios::binary);
         for(int i = 0; i < count; i++){
-            ofile.write(reinterpret_cast<char *>(&plist[i]), sizeof(plist[i]));
+            ofile.write((char *) &plist[i], sizeof(plist[i]));
         }
         ofile.close();
         delete [] plist;
     }else{
-        fstream ofile("leaderboard.bin", ios::out | ios::binary);
-        ofile.write(reinterpret_cast<char *>(&p), sizeof(Player));
+        ofstream ofile("leaderboard.bin", ios::out | ios::binary);
+        ofile.write((char *) &p, sizeof(Player));
         ofile.close();
     }
 

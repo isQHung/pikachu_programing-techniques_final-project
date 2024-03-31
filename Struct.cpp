@@ -25,13 +25,14 @@ void Normal::drawbox(){
         }
 
         gotoxy(x*10+5, y*4+2);
-        setColor(c%6 + 9, 5);
+        setColor(c%6 + 9, 15);
         cout << "\e[1m" << c << "";
     }else{
         gotoxy(x*10+5,y*4+2);
         setColor(c%6 + 9, 0);
         cout << "\e[1m" << c << "";
     }
+    setColor(15, 0);//reset color
 }
 
 void Normal::deletebox(){
@@ -113,8 +114,8 @@ void displayStatus(bool win){
 void getPlayerInfo(Player& p) {
     gotoxy(50, 12);
     cout << "Enter player name: ";
-    cin >> p.name;
-    cin.ignore();
+    cin.getline(p.name,50);
+    // cin.ignore();
     p.life = 3;
     p.point = 0;
 }

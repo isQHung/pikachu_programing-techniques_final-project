@@ -13,7 +13,7 @@
 using namespace std;
 
 struct Player{
-    char name[10];
+    char name[50];
     int point;
     int life;
 };
