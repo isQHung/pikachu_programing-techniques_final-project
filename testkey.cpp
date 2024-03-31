@@ -91,13 +91,13 @@ int main(){
     // }
 
     // cin.get();
-    setColor(11,8);
-    cout << "\e[1mhilll";
-    cin.get();
-    // int temp = getch();
-    // while ( temp != 27){
-    //     temp = getch();
-    //     cout << temp <<endl;
-    // }
+    // setColor(11,8);
+    // cout << "\e[1mhilll";
+    // cin.get();
+    int temp = getch();
+    while ( temp != 27){
+        temp = getch();
+        cout << temp <<endl;
+    }
     
 }

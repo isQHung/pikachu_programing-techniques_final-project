@@ -8,7 +8,7 @@ char box[5][12] = {
             {" --------- "}
 };
 
-void Normal::drawbox(){
+void Normal::drawbox(int background = 0){
     if (!isValid) return;//chi ve box khi hop le
 
     setColor(15, 0);
@@ -16,32 +16,45 @@ void Normal::drawbox(){
     gotoxy(x*10, y*4 + i);
     cout << box[i];
     }
+    
+    if (isSelected && !background) background = 15; // mau trang
+    else if (suggestions && !background) background = 8; // mau xam
 
-    if (isSelected){
-        setColor(15,15); // nen trang
-        for (int i = 1; i < 4; i++) {
-            gotoxy(x * 10 + 1, y * 4 + i);
-            cout << "         ";
-        }
-
-        gotoxy(x*10+5, y*4+2);
-        setColor(c%6 + 9, 15);
-        cout << "\e[1m" << c << "";
-    }else if (suggestions){
-        setColor(15,8); // nen xam
-        for (int i = 1; i < 4; i++) {
-            gotoxy(x * 10 + 1, y * 4 + i);
-            cout << "         ";
-        }
-
-        gotoxy(x*10+5, y*4+2);
-        setColor(c%6 + 9, 15);
-        cout << "\e[1m" << c << "";
-    }else{
-        gotoxy(x*10+5,y*4+2);
-        setColor(c%6 + 9, 0);
-        cout << "\e[1m" << c << "";
+    // ve nen
+    setColor(15,background);
+    for (int i = 1; i < 4; i++) {
+        gotoxy(x * 10 + 1, y * 4 + i);
+        cout << "         ";
     }
+    // them c
+    gotoxy(x*10+5,y*4+2);
+    setColor(c%14 + 1, background);
+    cout << "\e[1m" << c << "";
+    // if (isSelected){
+    //     setColor(15,15); // nen trang
+    //     for (int i = 1; i < 4; i++) {
+    //         gotoxy(x * 10 + 1, y * 4 + i);
+    //         cout << "         ";
+    //     }
+
+    //     gotoxy(x*10+5, y*4+2);
+    //     setColor(c%6 + 9, 15);
+    //     cout << "\e[1m" << c << "";
+    // }else if (suggestions){
+    //     setColor(15,8); // nen xam
+    //     for (int i = 1; i < 4; i++) {
+    //         gotoxy(x * 10 + 1, y * 4 + i);
+    //         cout << "         ";
+    //     }
+
+    //     gotoxy(x*10+5, y*4+2);
+    //     setColor(c%6 + 9, 8);
+    //     cout << "\e[1m" << c << "";
+    // }else{
+    //     gotoxy(x*10+5,y*4+2);
+    //     setColor(c%14 + 1, 0);
+    //     cout << "\e[1m" << c << "";
+    // }
     setColor(15, 0);//reset color
 }
 

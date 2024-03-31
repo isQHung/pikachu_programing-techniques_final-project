@@ -60,7 +60,7 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
         }
         else if (temp == ENTER_KEY) { // neu la Enter
             if (pos.x == selectedPos[0].x && pos.y == selectedPos[0].y) {
-                board[selectedPos[0].y][selectedPos[0].x].drawbox();
+                board[selectedPos[0].y][selectedPos[0].x].drawbox(12);
                 Sleep(500);
 
                 board[selectedPos[0].y][selectedPos[0].x].isSelected = 0;
@@ -83,8 +83,8 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                             gotoxy(40, 0);
                             cout << "\e[0mPoint: " << p.point;
 
-                            board[selectedPos[0].y][selectedPos[0].x].drawbox();
-                            board[selectedPos[1].y][selectedPos[1].x].drawbox();
+                            board[selectedPos[0].y][selectedPos[0].x].drawbox(10);
+                            board[selectedPos[1].y][selectedPos[1].x].drawbox(10);
                             Sleep(500);
 
                             board[selectedPos[0].y][selectedPos[0].x].isValid = 0;
@@ -95,25 +95,10 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                             board[selectedPos[1].y][selectedPos[1].x].deletebox();
                             displayBackground(selectedPos[1].x+1, selectedPos[1].y+1);
 
-
-                            // kiem tra su dung help
-                            bool isSuggestions = 0;
-                            for(int i = 0; i < BOARDHEIGTH && !isSuggestions; i++){
-                                for (int j = 0; j < BOARDWIDTH && !isSuggestions; j++){
-                                    if (board[i][j].suggestions && board[i][j].isValid) isSuggestions = 1;
-                                }
-                            }
-
-                            if (!isSuggestions){
-                                p.help--;
-                                gotoxy(100,0);
-                                cout << "Help: " << p.help;
-                            }
-
                         }
                         else {
-                            board[selectedPos[0].y][selectedPos[0].x].drawbox();
-                            board[selectedPos[1].y][selectedPos[1].x].drawbox();
+                            board[selectedPos[0].y][selectedPos[0].x].drawbox(12);
+                            board[selectedPos[1].y][selectedPos[1].x].drawbox(12);
                             Sleep(500);
 
                             p.life--;
@@ -123,8 +108,8 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                         }
                     }
                     else {
-                        board[selectedPos[0].y][selectedPos[0].x].drawbox();
-                        board[selectedPos[1].y][selectedPos[1].x].drawbox();
+                        board[selectedPos[0].y][selectedPos[0].x].drawbox(12);
+                        board[selectedPos[1].y][selectedPos[1].x].drawbox(12);
                         Sleep(500);
 
                         p.life--;
@@ -160,8 +145,26 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                 }
             }
             
+        }else if(temp == BACK_KEY && selectedPos[0].x != -1){ // huy chon cell
+            board[selectedPos[0].y][selectedPos[0].x].isSelected = 0;
+            couple = 2;
+            selectedPos[0] = { -1, -1 };
+
         }else if(temp == 104 && p.help > 0){ //neu la H key
-            checkValidPairs(board, 1);// dua ra goi y 
+            // kiem tra su dung help
+            bool isSuggestions = 0;
+            for(int i = 0; i < BOARDHEIGTH && !isSuggestions; i++){
+                for (int j = 0; j < BOARDWIDTH && !isSuggestions; j++){
+                    if (board[i][j].suggestions && board[i][j].isValid) isSuggestions = 1;
+                }
+            }
+
+            if (!isSuggestions){
+                p.help--;
+                gotoxy(100,0);
+                cout << "Help: " << p.help;
+                checkValidPairs(board, 1);// dua ra goi y 
+            }
         }
     }
     else //neu la dau mui ten
@@ -356,14 +359,16 @@ void normalMode(Player &p, int increase = 0){
     cout << "Help: " << p.help;
 
     setColor(10,0);
-    gotoxy(100, 12);
+    gotoxy(95, 12);
     cout << "Press arrow key to move";
-    gotoxy(100, 13);
+    gotoxy(95, 13);
     cout << "Press Enter to delete";
-    gotoxy(100, 14);
-    cout << "Press ESC to quit";
-    gotoxy(100, 15);
+    gotoxy(95, 14);
+    cout << "Press Backspace to cancel selection";
+    gotoxy(95, 15);
     cout << "Press H to get move suggestions";
+    gotoxy(95, 16);
+    cout << "Press ESC to quit";
     setColor(15,0);
 
     position selectedPos[] = { {-1, -1}, {-1, -1} };

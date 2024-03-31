@@ -27,7 +27,7 @@ struct Normal{
     bool isValid = 1, isSelected = 0, suggestions = 0;
     char c = ' ';
 
-    void drawbox();
+    void drawbox(int);
     void deletebox();
 };
 

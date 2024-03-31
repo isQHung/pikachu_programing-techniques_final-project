@@ -13,6 +13,9 @@
 #define KEY_RIGHT 77
 #define ESC_KEY 27
 #define ENTER_KEY 13
+#define HE_KEY 104
+#define BACK_KEY 8
+
 
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 HWND wConsole = GetConsoleWindow();
