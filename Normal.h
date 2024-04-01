@@ -20,7 +20,8 @@
 
 void initBoard(Normal**&);
 void deleteBoard(Normal**);
-void renderBoard(Normal**,int);
-void normalMode(Player&,int);
+void renderBoard(Normal**,int = 0);
+void move(Normal**, position&, int&, Player&, position, int&);
+void normalMode(Player&,int = 0);
 
 #endif

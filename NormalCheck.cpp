@@ -1,13 +1,15 @@
 #include "NormalCheck.h"
 
 bool nextcheck(Normal** board, int p1, int p2, int q1, int q2) {
-    if ((p1 == q1 + 1 || p1 == q1 - 1) && (p2 == q2)) {
-        if (board[p1][p2].c == board[q1][q2].c)
+    if ((p1 == q1 + 1 || p1 == q1 - 1) && (p2 == q2)) { //doc
+        if (board[p1][p2].c == board[q1][q2].c){
             return true;
+        }
     }
-    if ((p2 == q2 + 1 || p2 == q2 - 1) && (p1 == q1)) {
-        if (board[p1][p2].c == board[q1][q2].c)
+    if ((p2 == q2 + 1 || p2 == q2 - 1) && (p1 == q1)) {// ngang
+        if (board[p1][p2].c == board[q1][q2].c){
             return true;
+        } 
     }
     return false;
 }
@@ -97,6 +99,7 @@ bool Icheck_1(Normal** board, int p1, int p2, int q1, int q2) {
                 return false;
             }
         }
+
         return true;
     }
     return false;
@@ -250,7 +253,7 @@ bool allcheck(Normal** board, int p1, int p2, int q1, int q2) {
     return false;
 }
 
-bool checkValidPairs(Normal** board, bool needhelp = 0) {
+bool checkValidPairs(Normal** board, bool needhelp) {
     char check = 'A';
     while (check >= 'A' && check <= 'Z') {
         int cnt = 0;

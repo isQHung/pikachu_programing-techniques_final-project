@@ -10,6 +10,6 @@ bool Lcheck(Normal**, int p1, int p2, int q1, int q2);
 bool Zcheck(Normal**, int p1, int p2, int q1, int q2);
 bool Ucheck(Normal**, int p1, int p2, int q1, int q2);
 bool allcheck(Normal**, int p1, int p2, int q1, int q2);
-bool checkValidPairs(Normal**, bool);
+bool checkValidPairs(Normal**, bool = 0);
 
 #endif

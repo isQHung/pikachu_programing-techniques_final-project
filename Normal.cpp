@@ -44,10 +44,15 @@ void deleteBoard(Normal** board) {
     delete[]board;
 }
 
-void renderBoard(Normal** board, int needhelp = 0){
+void renderBoard(Normal** board, int needhelp){
+    // for(int i = 0; i < BOARDHEIGTH; i++)
+    //     for(int j = 0; j  < BOARDWIDTH; j++){
+    //         if(!board[i][j].isValid) displayBackground(board[i][j].x,board[i][j].y);
+    //     }
     for(int i = 0; i < BOARDHEIGTH; i++)
-        for(int j = 0; j  < BOARDWIDTH; j++)
+        for(int j = 0; j  < BOARDWIDTH; j++){
             board[i][j].drawbox(0);
+        }
 }
 
 //ref: https://github.com/PhVanMin/Pikachuuu/blob/master/NormalMode.cpp#L56  56->323
@@ -343,7 +348,7 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
     }
 }
 
-void normalMode(Player &p, int increase = 0){
+void normalMode(Player &p, int increase){
     srand(time(0));
 
     Normal** board;
@@ -381,7 +386,8 @@ void normalMode(Player &p, int increase = 0){
     while (!status && p.life) {
         board[curPosition.y][curPosition.x].isSelected = 1;
 
-        renderBoard(board);
+        // renderBackground();
+        renderBoard(board,0);
 
         move(board, curPosition, status, p, selectedPos, couple);
 
