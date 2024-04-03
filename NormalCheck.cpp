@@ -449,6 +449,8 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
     // }
     bool c1, c2, c3;
     int x1, x2, y1, y2;
+    int mi_x = min(q2,p2);
+    int mi_y = min(q1,p1);
     if (q2 < p2) {
         x1 = q2; y1 = q1;
         x2 = p2; y2 = p1;
@@ -468,7 +470,7 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                     if (draw){
                         setColor(10,0);
                         //vertical line
-                        int mi_y = min(y1,y2);
+                        // int mi_y = min(y1,y2);
                         for(int j = 0; j < abs(y2-y1)*4 + 1;j++){
                             gotoxy((i+1)*10 + 5, (mi_y+1)*4 + 2 + j);
                             cout <<"|";
@@ -513,10 +515,50 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                 c1 = linecheck(board, p1, p2, p1, i);
                 c2 = linecheck(board, q1, q2, q1, i);
                 if ((c1 && c2) || (c1 && q2 == i) || (p2 == i && c2)) {
-                    if(i == 0){
-                        //here
-                    }
+                    if(draw){
+                        //drawline
+                        setColor(10,0);
+                        if(i == 0){
+                            //here
+                            for(int j = 0; j < abs(y2 - y1)*4 - 1; j++){
+                                gotoxy(10 - 3, (mi_y+1)*4 + 3 + j);
+                                cout << "|";
+                            }
+                            for(int j = 0; j < (x1)*10 + 3; j++ ){
+                                gotoxy(10 - 3 + j, (y1+1)*4 + 2);
+                                cout << "-";
+                            }
+                            gotoxy((x1+1)*10 - 1, (y1+1)*4+2);
+                            cout << ">";
 
+                            for(int j = 0; j < (x2)*10 + 3; j++ ){
+                                gotoxy(10 - 3 + j, (y2+1)*4 + 2);
+                                cout << "-";
+                            }
+                            gotoxy((x2+1)*10 - 1, (y2+1)*4+2);
+                            cout << ">";
+                        }
+                        if(i == (BOARDWIDTH - 1)){
+                            for(int j = 0; j < abs(y2 - y1)*4 - 1; j++){
+                                gotoxy(80 + 13, (mi_y+1)*4 + 3 + j);
+                                cout << "|";
+                            }
+                            for(int j = 0; j < (BOARDWIDTH - x1)*10 + 3; j++ ){
+                                gotoxy(80 + 13 - j, (y1+1)*4 + 2);
+                                cout << "-";
+                            }
+                            gotoxy((x1+1)*10 + 11, (y1+1)*4+2);
+                            cout << "<";
+
+                            for(int j = 0; j < (BOARDWIDTH - x2)*10 + 3; j++ ){
+                                gotoxy(80 + 13 - j, (y2+1)*4 + 2);
+                                cout << "-";
+                            }
+                            gotoxy((x2+1)*10 + 11, (y2+1)*4+2);
+                            cout << "<";
+                        }
+                        setColor(15,0);
+                    }
                     return true;
                 }
             }
@@ -528,8 +570,8 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
         y2 = p1; x2 = p2;
     }
     else {
-        y1 = p1;
-        y2 = q1;
+        y1 = p1; x1 = p2;
+        y2 = q1; x2 = q2;
     }
     for (int i = 0; i < BOARDHEIGTH; i++) {
         if (i <= y1 || i >= y2) {
@@ -538,6 +580,43 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                 c1 = linecheck(board, p1, p2, i, p2);
                 c2 = linecheck(board, q1, q2, i, q2);
                 if (c1 && c2) {
+                    if(draw){
+                        //drawline
+                        setColor(10,0);
+                        for(int j = 0; j < abs(x1-x2)*10+1; j++){
+                            gotoxy((mi_x+1)*10 + 5 + j,(i+1)*4 + 2);
+                            cout << "-";
+                        }
+                        if(i <= y1){
+                            for(int j = 0; j < (y1 - i - 1)*4; j++){
+                                gotoxy((x1+1)*10 + 5, (i+1)*4 + 3 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x1+1)*10 + 5, (y1+1)*4 - 1);
+                            cout << "v";
+                            for(int j = 0; j < (y2 - i - 1)*4; j++){
+                                gotoxy((x2+1)*10 + 5, (i+1)*4 + 3 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x2+1)*10 + 5, (y2+1)*4 - 1);
+                            cout << "v";
+                        }else if(i >= y2){
+                            for(int j = 0; j < (i - y1 - 1)*4; j++){
+                                gotoxy((x1+1)*10 + 5, (y1+1)*4 + 6 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x1+1)*10 + 5, (y1+1)*4 + 5);
+                            cout << "^";
+                            for(int j = 0; j < (i - y2 - 1)*4; j++){
+                                gotoxy((x2+1)*10 + 5, (y2+1)*4 + 6 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x2+1)*10 + 5, (y2+1)*4 + 5);
+                            cout << "^";
+
+                        }
+                        setColor(15,0);
+                    }
                     return true;
                 }
             }
@@ -545,6 +624,52 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                 c1 = linecheck(board, p1, p2, i, p2);
                 c2 = linecheck(board, q1, q2, i, q2);
                 if ((c1 && c2) || (c1 && q1 == i) || (p1 == i && c2)) {
+                    if(draw){
+                        setColor(10,0);
+                        //drawline
+                        if (i == 0){
+                            for(int j = 0; j < abs(p2 - q2)*10 + 1; j++){
+                                gotoxy((mi_x + 1)*10 + 5 + j,(i + 1)*4 - 3);
+                                cout << "-";
+                            }
+
+                            for(int j = 0; j < (y1)*4; j++){
+                                gotoxy((x1 + 1)*10 + 5, (y1+1)*4 - 2 - j);
+                                cout << "|";
+                            }
+                            gotoxy((x1 + 1)*10 + 5, (y1+1)*4 - 1);
+                            cout << "v";
+
+                            for(int j = 0; j < (y2)*4; j++){
+                                gotoxy((x2 + 1)*10 + 5, (y2+1)*4 - 2 - j);
+                                cout << "|";
+                            }
+                            gotoxy((x2 + 1)*10 + 5, (y2+1)*4 - 1);
+                            cout << "v";
+
+                        }else if(i == (BOARDHEIGTH - 1)){
+                            for(int j = 0; j < abs(p2 - q2)*10 + 1; j++){
+                                gotoxy((mi_x + 1)*10 + 5 + j,(i + 1)*4 + 7);
+                                cout << "-";
+                            }
+
+                            for(int j = 0; j < (BOARDHEIGTH - y1)*4 + 1; j++){
+                                gotoxy((x1 + 1)*10 + 5, (y1+1)*4 + 6 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x1 + 1)*10 + 5, (y1+1)*4 + 5);
+                            cout << "^";
+
+                            for(int j = 0; j < (BOARDHEIGTH - y2)*4 + 1; j++){
+                                gotoxy((x2 + 1)*10 + 5, (y2+1)*4 + 6 + j);
+                                cout << "|";
+                            }
+                            gotoxy((x2 + 1)*10 + 5, (y2+1)*4 + 5);
+                            cout << "^";
+
+                        }
+                        setColor(15,0);
+                    }
                     return true;
                 }
             }

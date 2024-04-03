@@ -45,10 +45,6 @@ void deleteBoard(Normal** board) {
 }
 
 void renderBoard(Normal** board, int needhelp){
-    // for(int i = 0; i < BOARDHEIGTH; i++)
-    //     for(int j = 0; j  < BOARDWIDTH; j++){
-    //         if(!board[i][j].isValid) displayBackground(board[i][j].x,board[i][j].y);
-    //     }
     for(int i = 0; i < BOARDHEIGTH; i++)
         for(int j = 0; j  < BOARDWIDTH; j++){
             board[i][j].drawbox(0);
@@ -93,7 +89,7 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                             nextcheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x,1);
                             Sleep(500);
                             getch();
-                            if(Ucheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x, 1)){
+                            if(Ucheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x)){
                                 //clear border
                                 setColor(15,0);
                                 for(int i = 0; i < 3; i++){
