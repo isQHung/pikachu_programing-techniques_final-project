@@ -36,7 +36,7 @@ char box[5][12] = {
 void Normal::drawbox(int background = 0){
     if (!isValid){
         setColor(15, 0);
-        int h = 3,w = 10;
+        int h = 4,w = 10;
     
         for (int i = 0; i < h; i++){
             for (int j = 0; j < w; j++){

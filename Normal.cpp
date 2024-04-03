@@ -83,14 +83,37 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
 
                 if (couple == 0) { // neu da chon 1 cap
                     if (board[selectedPos[0].y][selectedPos[0].x].c == board[selectedPos[1].y][selectedPos[1].x].c) {  // neu cap nay hop nhau
-                        if (allcheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x)) {
+                        if (allcheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x, 1)) {
                             p.point += 20;
                             gotoxy(40, 0);
                             cout << "\e[0mPoint: " << p.point;
 
                             board[selectedPos[0].y][selectedPos[0].x].drawbox(10);
                             board[selectedPos[1].y][selectedPos[1].x].drawbox(10);
+                            nextcheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x,1);
                             Sleep(500);
+                            getch();
+                            if(Ucheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x, 1)){
+                                //clear border
+                                setColor(15,0);
+                                for(int i = 0; i < 3; i++){
+                                    for (int j = 0; j < 80; j++){
+                                        gotoxy(j+10, i+1);
+                                        cout << " ";
+                                        gotoxy(j+10, i+25);
+                                        cout << " ";
+                                    }
+                                }
+                                for(int i = 0; i < 20; i++){
+                                    for(int j = 0; j < 3; j++){
+                                        gotoxy(j+7, i+4);
+                                        cout << " ";
+                                        gotoxy(j+91, i+4);
+                                        cout << " ";
+                                    }
+                                }
+
+                            };
 
                             board[selectedPos[0].y][selectedPos[0].x].isValid = 0;
                             board[selectedPos[0].y][selectedPos[0].x].deletebox();
@@ -364,15 +387,15 @@ void normalMode(Player &p, int increase){
     cout << "Help: " << p.help;
 
     setColor(10,0);
-    gotoxy(95, 12);
+    gotoxy(97, 12);
     cout << "Press arrow key to move";
-    gotoxy(95, 13);
+    gotoxy(97, 13);
     cout << "Press Enter to delete";
-    gotoxy(95, 14);
+    gotoxy(97, 14);
     cout << "Press Backspace to cancel selection";
-    gotoxy(95, 15);
+    gotoxy(97, 15);
     cout << "Press H to get move suggestions";
-    gotoxy(95, 16);
+    gotoxy(97, 16);
     cout << "Press ESC to quit";
     setColor(15,0);
 

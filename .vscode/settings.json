@@ -10,5 +10,7 @@
         "fstream": "cpp",
         "typeinfo": "cpp",
         "cmake.cmakePath": "D:\\project\\cmake",
+        "random": "cpp",
+        "limits": "cpp"
     }
 }
