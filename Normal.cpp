@@ -88,9 +88,9 @@ void move(Normal** board, position& pos, int& status, Player& p, position select
                             board[selectedPos[1].y][selectedPos[1].x].drawbox(10);
                             nextcheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x,1);
                             Sleep(500);
-                            getch();
+
+                            //clear border
                             if(Ucheck(board, selectedPos[0].y, selectedPos[0].x, selectedPos[1].y, selectedPos[1].x)){
-                                //clear border
                                 setColor(15,0);
                                 for(int i = 0; i < 3; i++){
                                     for (int j = 0; j < 80; j++){

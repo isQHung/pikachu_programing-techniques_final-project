@@ -543,14 +543,14 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                                 gotoxy(80 + 13, (mi_y+1)*4 + 3 + j);
                                 cout << "|";
                             }
-                            for(int j = 0; j < (BOARDWIDTH - x1)*10 + 3; j++ ){
+                            for(int j = 0; j < (BOARDWIDTH - x1 - 1)*10 + 3; j++ ){
                                 gotoxy(80 + 13 - j, (y1+1)*4 + 2);
                                 cout << "-";
                             }
                             gotoxy((x1+1)*10 + 11, (y1+1)*4+2);
                             cout << "<";
 
-                            for(int j = 0; j < (BOARDWIDTH - x2)*10 + 3; j++ ){
+                            for(int j = 0; j < (BOARDWIDTH - x2 - 1)*10 + 3; j++ ){
                                 gotoxy(80 + 13 - j, (y2+1)*4 + 2);
                                 cout << "-";
                             }
@@ -653,14 +653,14 @@ bool Ucheck(Normal** board, int p1, int p2, int q1, int q2, bool draw) {
                                 cout << "-";
                             }
 
-                            for(int j = 0; j < (BOARDHEIGTH - y1)*4 + 1; j++){
+                            for(int j = 0; j < (BOARDHEIGTH - y1 - 1)*4 + 1; j++){
                                 gotoxy((x1 + 1)*10 + 5, (y1+1)*4 + 6 + j);
                                 cout << "|";
                             }
                             gotoxy((x1 + 1)*10 + 5, (y1+1)*4 + 5);
                             cout << "^";
 
-                            for(int j = 0; j < (BOARDHEIGTH - y2)*4 + 1; j++){
+                            for(int j = 0; j < (BOARDHEIGTH - y2 - 1)*4 + 1; j++){
                                 gotoxy((x2 + 1)*10 + 5, (y2+1)*4 + 6 + j);
                                 cout << "|";
                             }
