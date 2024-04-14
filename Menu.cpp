@@ -1,7 +1,7 @@
 #include "Menu.h"
 
 void drawSelectedMenu(int choice, int text_color, int text_background){
-    char options[4][12]={
+    char options[][12]={
         "NORMAL",
         "HARD",
         "LEADERBOARD",
@@ -142,7 +142,7 @@ void writeLeaderBoard(Player p){
             *(plist + count) = temp;
             count++;
         }
-        if (!count) cout << "no before";
+        // if (!count) cout << "no before";
         //find the right rating
         int index = count - 1;
         for (index; index >= 0; index --){

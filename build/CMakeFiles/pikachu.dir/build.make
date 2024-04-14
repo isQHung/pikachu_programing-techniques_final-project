@@ -82,10 +82,38 @@ CMakeFiles/pikachu.dir/Console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pikachu.dir/Console.cpp.s"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\project\pikachuuu\Console.cpp -o CMakeFiles\pikachu.dir\Console.cpp.s
 
+CMakeFiles/pikachu.dir/Diffmode.cpp.obj: CMakeFiles/pikachu.dir/flags.make
+CMakeFiles/pikachu.dir/Diffmode.cpp.obj: D:/project/pikachuuu/Diffmode.cpp
+CMakeFiles/pikachu.dir/Diffmode.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pikachu.dir/Diffmode.cpp.obj"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Diffmode.cpp.obj -MF CMakeFiles\pikachu.dir\Diffmode.cpp.obj.d -o CMakeFiles\pikachu.dir\Diffmode.cpp.obj -c D:\project\pikachuuu\Diffmode.cpp
+
+CMakeFiles/pikachu.dir/Diffmode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pikachu.dir/Diffmode.cpp.i"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\project\pikachuuu\Diffmode.cpp > CMakeFiles\pikachu.dir\Diffmode.cpp.i
+
+CMakeFiles/pikachu.dir/Diffmode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pikachu.dir/Diffmode.cpp.s"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\project\pikachuuu\Diffmode.cpp -o CMakeFiles\pikachu.dir\Diffmode.cpp.s
+
+CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj: CMakeFiles/pikachu.dir/flags.make
+CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj: D:/project/pikachuuu/Diffmodecheck.cpp
+CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj -MF CMakeFiles\pikachu.dir\Diffmodecheck.cpp.obj.d -o CMakeFiles\pikachu.dir\Diffmodecheck.cpp.obj -c D:\project\pikachuuu\Diffmodecheck.cpp
+
+CMakeFiles/pikachu.dir/Diffmodecheck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pikachu.dir/Diffmodecheck.cpp.i"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\project\pikachuuu\Diffmodecheck.cpp > CMakeFiles\pikachu.dir\Diffmodecheck.cpp.i
+
+CMakeFiles/pikachu.dir/Diffmodecheck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pikachu.dir/Diffmodecheck.cpp.s"
+	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\project\pikachuuu\Diffmodecheck.cpp -o CMakeFiles\pikachu.dir\Diffmodecheck.cpp.s
+
 CMakeFiles/pikachu.dir/Main.cpp.obj: CMakeFiles/pikachu.dir/flags.make
 CMakeFiles/pikachu.dir/Main.cpp.obj: D:/project/pikachuuu/Main.cpp
 CMakeFiles/pikachu.dir/Main.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pikachu.dir/Main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pikachu.dir/Main.cpp.obj"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Main.cpp.obj -MF CMakeFiles\pikachu.dir\Main.cpp.obj.d -o CMakeFiles\pikachu.dir\Main.cpp.obj -c D:\project\pikachuuu\Main.cpp
 
 CMakeFiles/pikachu.dir/Main.cpp.i: cmake_force
@@ -99,7 +127,7 @@ CMakeFiles/pikachu.dir/Main.cpp.s: cmake_force
 CMakeFiles/pikachu.dir/Menu.cpp.obj: CMakeFiles/pikachu.dir/flags.make
 CMakeFiles/pikachu.dir/Menu.cpp.obj: D:/project/pikachuuu/Menu.cpp
 CMakeFiles/pikachu.dir/Menu.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/pikachu.dir/Menu.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pikachu.dir/Menu.cpp.obj"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Menu.cpp.obj -MF CMakeFiles\pikachu.dir\Menu.cpp.obj.d -o CMakeFiles\pikachu.dir\Menu.cpp.obj -c D:\project\pikachuuu\Menu.cpp
 
 CMakeFiles/pikachu.dir/Menu.cpp.i: cmake_force
@@ -113,7 +141,7 @@ CMakeFiles/pikachu.dir/Menu.cpp.s: cmake_force
 CMakeFiles/pikachu.dir/Normal.cpp.obj: CMakeFiles/pikachu.dir/flags.make
 CMakeFiles/pikachu.dir/Normal.cpp.obj: D:/project/pikachuuu/Normal.cpp
 CMakeFiles/pikachu.dir/Normal.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/pikachu.dir/Normal.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pikachu.dir/Normal.cpp.obj"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Normal.cpp.obj -MF CMakeFiles\pikachu.dir\Normal.cpp.obj.d -o CMakeFiles\pikachu.dir\Normal.cpp.obj -c D:\project\pikachuuu\Normal.cpp
 
 CMakeFiles/pikachu.dir/Normal.cpp.i: cmake_force
@@ -127,7 +155,7 @@ CMakeFiles/pikachu.dir/Normal.cpp.s: cmake_force
 CMakeFiles/pikachu.dir/NormalCheck.cpp.obj: CMakeFiles/pikachu.dir/flags.make
 CMakeFiles/pikachu.dir/NormalCheck.cpp.obj: D:/project/pikachuuu/NormalCheck.cpp
 CMakeFiles/pikachu.dir/NormalCheck.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/pikachu.dir/NormalCheck.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/pikachu.dir/NormalCheck.cpp.obj"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/NormalCheck.cpp.obj -MF CMakeFiles\pikachu.dir\NormalCheck.cpp.obj.d -o CMakeFiles\pikachu.dir\NormalCheck.cpp.obj -c D:\project\pikachuuu\NormalCheck.cpp
 
 CMakeFiles/pikachu.dir/NormalCheck.cpp.i: cmake_force
@@ -141,7 +169,7 @@ CMakeFiles/pikachu.dir/NormalCheck.cpp.s: cmake_force
 CMakeFiles/pikachu.dir/Struct.cpp.obj: CMakeFiles/pikachu.dir/flags.make
 CMakeFiles/pikachu.dir/Struct.cpp.obj: D:/project/pikachuuu/Struct.cpp
 CMakeFiles/pikachu.dir/Struct.cpp.obj: CMakeFiles/pikachu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/pikachu.dir/Struct.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/pikachu.dir/Struct.cpp.obj"
 	D:\project\mingw-get-setup\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pikachu.dir/Struct.cpp.obj -MF CMakeFiles\pikachu.dir\Struct.cpp.obj.d -o CMakeFiles\pikachu.dir\Struct.cpp.obj -c D:\project\pikachuuu\Struct.cpp
 
 CMakeFiles/pikachu.dir/Struct.cpp.i: cmake_force
@@ -155,6 +183,8 @@ CMakeFiles/pikachu.dir/Struct.cpp.s: cmake_force
 # Object files for target pikachu
 pikachu_OBJECTS = \
 "CMakeFiles/pikachu.dir/Console.cpp.obj" \
+"CMakeFiles/pikachu.dir/Diffmode.cpp.obj" \
+"CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj" \
 "CMakeFiles/pikachu.dir/Main.cpp.obj" \
 "CMakeFiles/pikachu.dir/Menu.cpp.obj" \
 "CMakeFiles/pikachu.dir/Normal.cpp.obj" \
@@ -165,6 +195,8 @@ pikachu_OBJECTS = \
 pikachu_EXTERNAL_OBJECTS =
 
 pikachu.exe: CMakeFiles/pikachu.dir/Console.cpp.obj
+pikachu.exe: CMakeFiles/pikachu.dir/Diffmode.cpp.obj
+pikachu.exe: CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj
 pikachu.exe: CMakeFiles/pikachu.dir/Main.cpp.obj
 pikachu.exe: CMakeFiles/pikachu.dir/Menu.cpp.obj
 pikachu.exe: CMakeFiles/pikachu.dir/Normal.cpp.obj
@@ -174,7 +206,7 @@ pikachu.exe: CMakeFiles/pikachu.dir/build.make
 pikachu.exe: CMakeFiles/pikachu.dir/linkLibs.rsp
 pikachu.exe: CMakeFiles/pikachu.dir/objects1.rsp
 pikachu.exe: CMakeFiles/pikachu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable pikachu.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable pikachu.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\pikachu.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

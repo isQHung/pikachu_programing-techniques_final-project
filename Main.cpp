@@ -1,9 +1,6 @@
 #include "Menu.h"
-// #include "Menu.cpp"
 #include "Normal.h"
-// #include "Normal.cpp"
-
-// #include "Hard.h"
+#include "Diffmode.h"
 
 int main(){
     initWindow(1000,500);
@@ -21,7 +18,7 @@ int main(){
 
             case 1:
                 getPlayerInfo(p);
-                //hardMode(p);
+                difficultMode(p);
                 break;
 
             case 2:

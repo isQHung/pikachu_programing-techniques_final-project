@@ -33,8 +33,14 @@ struct Normal{
 
 
 //Hard mode
-struct Hard{
-    
+struct CELL_2 {
+	int x, y;
+	char c = ' ';
+	bool isSelected = 0;
+	CELL_2* next;
+
+	void drawBox(int);
+	void deleteBox();
 };
 
 struct position{

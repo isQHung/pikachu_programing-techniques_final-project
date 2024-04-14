@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pikachu.dir/Console.cpp.obj"
   "CMakeFiles/pikachu.dir/Console.cpp.obj.d"
+  "CMakeFiles/pikachu.dir/Diffmode.cpp.obj"
+  "CMakeFiles/pikachu.dir/Diffmode.cpp.obj.d"
+  "CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj"
+  "CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj.d"
   "CMakeFiles/pikachu.dir/Main.cpp.obj"
   "CMakeFiles/pikachu.dir/Main.cpp.obj.d"
   "CMakeFiles/pikachu.dir/Menu.cpp.obj"

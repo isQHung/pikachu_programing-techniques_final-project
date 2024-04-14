@@ -546,6 +546,54 @@ Console.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Console.cpp.s
 .PHONY : Console.cpp.s
 
+Diffmode.obj: Diffmode.cpp.obj
+.PHONY : Diffmode.obj
+
+# target to build an object file
+Diffmode.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmode.cpp.obj
+.PHONY : Diffmode.cpp.obj
+
+Diffmode.i: Diffmode.cpp.i
+.PHONY : Diffmode.i
+
+# target to preprocess a source file
+Diffmode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmode.cpp.i
+.PHONY : Diffmode.cpp.i
+
+Diffmode.s: Diffmode.cpp.s
+.PHONY : Diffmode.s
+
+# target to generate assembly for a file
+Diffmode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmode.cpp.s
+.PHONY : Diffmode.cpp.s
+
+Diffmodecheck.obj: Diffmodecheck.cpp.obj
+.PHONY : Diffmodecheck.obj
+
+# target to build an object file
+Diffmodecheck.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj
+.PHONY : Diffmodecheck.cpp.obj
+
+Diffmodecheck.i: Diffmodecheck.cpp.i
+.PHONY : Diffmodecheck.i
+
+# target to preprocess a source file
+Diffmodecheck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmodecheck.cpp.i
+.PHONY : Diffmodecheck.cpp.i
+
+Diffmodecheck.s: Diffmodecheck.cpp.s
+.PHONY : Diffmodecheck.s
+
+# target to generate assembly for a file
+Diffmodecheck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/Diffmodecheck.cpp.s
+.PHONY : Diffmodecheck.cpp.s
+
 Main.obj: Main.cpp.obj
 .PHONY : Main.obj
 
@@ -709,6 +757,12 @@ help:
 	@echo ... Console.obj
 	@echo ... Console.i
 	@echo ... Console.s
+	@echo ... Diffmode.obj
+	@echo ... Diffmode.i
+	@echo ... Diffmode.s
+	@echo ... Diffmodecheck.obj
+	@echo ... Diffmodecheck.i
+	@echo ... Diffmodecheck.s
 	@echo ... Main.obj
 	@echo ... Main.i
 	@echo ... Main.s

@@ -7,6 +7,18 @@
 },
 {
   "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Diffmode.cpp.obj -c D:\\project\\pikachuuu\\Diffmode.cpp",
+  "file": "D:/project/pikachuuu/Diffmode.cpp",
+  "output": "CMakeFiles/pikachu.dir/Diffmode.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
+  "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Diffmodecheck.cpp.obj -c D:\\project\\pikachuuu\\Diffmodecheck.cpp",
+  "file": "D:/project/pikachuuu/Diffmodecheck.cpp",
+  "output": "CMakeFiles/pikachu.dir/Diffmodecheck.cpp.obj"
+},
+{
+  "directory": "D:/project/pikachuuu/build",
   "command": "D:\\project\\mingw-get-setup\\bin\\g++.exe   -g -o CMakeFiles\\pikachu.dir\\Main.cpp.obj -c D:\\project\\pikachuuu\\Main.cpp",
   "file": "D:/project/pikachuuu/Main.cpp",
   "output": "CMakeFiles/pikachu.dir/Main.cpp.obj"

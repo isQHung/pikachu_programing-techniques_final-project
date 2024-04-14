@@ -836,12 +836,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/pikachu.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pikachu.dir\build.make CMakeFiles/pikachu.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target pikachu"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\project\pikachuuu\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target pikachu"
 .PHONY : CMakeFiles/pikachu.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pikachu.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\pikachuuu\build\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\pikachuuu\build\CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/pikachu.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\project\pikachuuu\build\CMakeFiles 0
 .PHONY : CMakeFiles/pikachu.dir/rule

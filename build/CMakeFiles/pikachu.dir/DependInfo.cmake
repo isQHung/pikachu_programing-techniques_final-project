@@ -14,6 +14,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "D:/project/pikachuuu/Normal.cpp" "CMakeFiles/pikachu.dir/Normal.cpp.obj" "gcc" "CMakeFiles/pikachu.dir/Normal.cpp.obj.d"
   "D:/project/pikachuuu/NormalCheck.cpp" "CMakeFiles/pikachu.dir/NormalCheck.cpp.obj" "gcc" "CMakeFiles/pikachu.dir/NormalCheck.cpp.obj.d"
   "D:/project/pikachuuu/Struct.cpp" "CMakeFiles/pikachu.dir/Struct.cpp.obj" "gcc" "CMakeFiles/pikachu.dir/Struct.cpp.obj.d"
+  "D:/project/pikachuuu/Diffmode.cpp" "CMakeFiles/pikachu.dir/diffmode.cpp.obj" "gcc" "CMakeFiles/pikachu.dir/diffmode.cpp.obj.d"
+  "D:/project/pikachuuu/Diffmodecheck.cpp" "CMakeFiles/pikachu.dir/diffmodecheck.cpp.obj" "gcc" "CMakeFiles/pikachu.dir/diffmodecheck.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -91,6 +91,40 @@ void Normal::deletebox(){
 
 }
 
+// diffmode
+void CELL_2::drawBox(int background = 0) {
+    int x1 = x + 1, y1 = y + 1;
+    if (isSelected && !background) background = 15; // mau trang
+    // ve box
+    setColor(15,0);
+    for (int i = 0; i < 5; i++) {
+        gotoxy(y1 * 10, x1 * 4 + i);
+        cout << box[i];
+    }
+
+    // ve nen
+    setColor(15,background);
+    for (int i = 1; i < 4; i++) {
+        gotoxy(y1 * 10 + 1, x1 * 4 + i);
+        cout << "         ";
+    }
+    // them c
+    gotoxy(y1*10+5,x1*4+2);
+    setColor(c%14 + 1, background);
+    cout << "\e[1m" << c << "";
+   
+    setColor(15, 0);//reset color
+}
+
+void CELL_2::deleteBox() {
+    int x1 = x + 1, y1 = y + 1;
+
+    for (int i = 0; i < 5; i++) {
+        gotoxy(y1 * 10, x1 * 4 + i);
+        cout << "           ";
+    }
+}
+
 
 void displayBackground(int x, int y){
 
