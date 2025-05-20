@@ -1,3 +1,0 @@
-D:\project\cmake\bin\cmake.exe -E rm -f CMakeFiles\pikachu.dir/objects.a
-D:\project\mingw-get-setup\bin\ar.exe qc CMakeFiles\pikachu.dir/objects.a @CMakeFiles\pikachu.dir\objects1.rsp
-D:\project\mingw-get-setup\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\pikachu.dir/objects.a -Wl,--no-whole-archive -o pikachu.exe -Wl,--out-implib,libpikachu.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\pikachu.dir\linkLibs.rsp
